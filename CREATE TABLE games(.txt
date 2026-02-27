@@ -1,0 +1,5 @@
+CREATE TABLE games(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ state TEXT,
+ turn VARCHAR(10)
+);

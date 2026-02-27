@@ -1,0 +1,7 @@
+public class GameController extends TextWebSocketHandler {
+ @Override
+ protected void handleTextMessage(WebSocketSession s, TextMessage m) throws Exception {
+  for(WebSocketSession x:s.getOpenSessions())
+   if(x.isOpen()) x.sendMessage(m);
+ }
+}

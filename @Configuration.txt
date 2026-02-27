@@ -1,0 +1,7 @@
+@Configuration
+@EnableWebSocket
+public class WebSocketConfig implements WebSocketConfigurer {
+ public void registerWebSocketHandlers(WebSocketHandlerRegistry r){
+  r.addHandler(new GameController(),"/play").setAllowedOrigins("*");
+ }
+}
